@@ -185,6 +185,11 @@ public class CargarDatos extends javax.swing.JFrame {
         btnGuardar.setText("Guardar");
 
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -251,6 +256,18 @@ public class CargarDatos extends javax.swing.JFrame {
     private void cbAtencionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAtencionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbAtencionActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        txtCelDueño.setText("");
+        txtColor.setText("");
+        txtNombre.setText("");
+        txtNombreDueño.setText("");
+        txtRaza.setText("");
+        oaObservaciones.setText("");
+        cbAlergia.setSelectedIndex(0);
+        cbAtencion.setSelectedIndex(0);
+                
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
