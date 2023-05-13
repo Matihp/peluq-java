@@ -4,12 +4,17 @@
  */
 package com.mycompany.peluq.logic;
 
-/**
- *
- * @author Matias
- */
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.GenerationType;
+import javax.persistence.OneToOne;
+
+
+@Entity
 public class Mascota {
-    
+    @Id
+    @GeneratedValue( strategy = GenerationType.SEQUENCE)
     private int num_cliente;
     private String nombre;
     private String color;
@@ -17,7 +22,7 @@ public class Mascota {
     private String atencion_especial;
     private String alergico;
     private String observaciones;
-    
+    @OneToOne
     private Duenio elDuenio;
 
     public Mascota(int num_cliente, String nombre, String color, String raza, String atencion_especial, String alergico, String observaciones, Duenio elDuenio) {

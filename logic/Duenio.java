@@ -4,12 +4,15 @@
  */
 package com.mycompany.peluq.logic;
 
-/**
- *
- * @author Matias
- */
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.GenerationType;
+
+@Entity
 public class Duenio {
-    
+    @Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private int duenioId;
     private String nombre;
     private String celuDuenio;
