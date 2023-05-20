@@ -4,15 +4,14 @@
  */
 package com.mycompany.peluq.inter;
 
-/**
- *
- * @author Matias
- */
-public class CargarDatos extends javax.swing.JFrame {
+import com.mycompany.peluq.logic.Controladora;
 
-    /**
-     * Creates new form CargarDatos
-     */
+
+public class CargarDatos extends javax.swing.JFrame {
+    
+    Controladora control = new Controladora();
+
+
     public CargarDatos() {
         initComponents();
     }
@@ -183,6 +182,11 @@ public class CargarDatos extends javax.swing.JFrame {
         );
 
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -268,6 +272,19 @@ public class CargarDatos extends javax.swing.JFrame {
         cbAtencion.setSelectedIndex(0);
                 
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+      String celDueño= txtCelDueño.getText();
+      String color = txtColor.getText();
+      String nombre= txtNombre.getText();
+      String nombreDuenio= txtNombreDueño.getText();
+      String raza= txtRaza.getText();
+      String observaciones = oaObservaciones.getText();
+      String alergia = (String) cbAlergia.getSelectedItem();
+      String atencion = (String) cbAtencion.getSelectedItem();
+      
+      control.guardar(nombre,nombreDuenio,celDueño,color,raza,observaciones,alergia,atencion);
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

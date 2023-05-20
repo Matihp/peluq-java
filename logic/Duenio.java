@@ -4,13 +4,14 @@
  */
 package com.mycompany.peluq.logic;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.GenerationType;
 
 @Entity
-public class Duenio {
+public class Duenio implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private int duenioId;
@@ -21,6 +22,10 @@ public class Duenio {
         this.duenioId = duenioId;
         this.nombre = nombre;
         this.celuDuenio = celuDuenio;
+    }
+
+    Duenio() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getDuenioId() {

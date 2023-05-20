@@ -9,5 +9,6 @@ package com.mycompany.peluq.persistence;
  * @author Matias
  */
 public class ControladoraPersistencia {
-    
+    DuenioJpaController dueJpa= new DuenioJpaController();
+    MascotaJpaController masJpa= new MascotaJpaController();
 }
