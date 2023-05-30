@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.peluq.persistence;
 
 import com.mycompany.peluq.logic.Mascota;
@@ -16,20 +13,18 @@ import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-/**
- *
- * @author Matias
- */
 public class MascotaJpaController implements Serializable {
 
     public MascotaJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    public MascotaJpaController() {
-        emf = Persistence.createEntityManagerFactory("PeluPU");
-    }
+    
     private EntityManagerFactory emf = null;
-
+    
+    public MascotaJpaController() {
+            emf = Persistence.createEntityManagerFactory("PeluPU");
+        }
+    
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }

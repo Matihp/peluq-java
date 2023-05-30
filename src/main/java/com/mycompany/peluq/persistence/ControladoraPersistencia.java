@@ -4,6 +4,11 @@
  */
 package com.mycompany.peluq.persistence;
 
+import com.mycompany.peluq.logic.Duenio;
+import com.mycompany.peluq.logic.Mascota;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Matias
@@ -11,4 +16,16 @@ package com.mycompany.peluq.persistence;
 public class ControladoraPersistencia {
     DuenioJpaController dueJpa= new DuenioJpaController();
     MascotaJpaController masJpa= new MascotaJpaController();
+
+    public void guardar(Duenio due, Mascota mas) {
+        dueJpa.create(due);
+        masJpa.create(mas);
+        
+       // JOptionPane optionPane = new JOptionPane("Se guardo correctamente");
+        //optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        //JDialog dialog = optionPane.createDialog("Guardado exitoso");
+        //dialog.setAlwaysOnTop(true);
+        //dialog.setVisible(true);
+       
+    }
 }

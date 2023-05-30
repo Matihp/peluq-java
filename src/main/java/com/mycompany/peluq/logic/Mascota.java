@@ -26,6 +26,9 @@ public class Mascota implements Serializable {
     @OneToOne
     private Duenio elDuenio;
 
+    public Mascota() {
+    }
+
     public Mascota(int num_cliente, String nombre, String color, String raza, String atencion_especial, String alergico, String observaciones, Duenio elDuenio) {
         this.num_cliente = num_cliente;
         this.nombre = nombre;

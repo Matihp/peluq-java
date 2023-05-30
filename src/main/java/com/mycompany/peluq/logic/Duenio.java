@@ -18,14 +18,13 @@ public class Duenio implements Serializable {
     private String nombre;
     private String celuDuenio;
 
+    public Duenio() {
+    }
+
     public Duenio(int duenioId, String nombre, String celuDuenio) {
         this.duenioId = duenioId;
         this.nombre = nombre;
         this.celuDuenio = celuDuenio;
-    }
-
-    Duenio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getDuenioId() {
